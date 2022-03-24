@@ -1,0 +1,1 @@
+export const getAll = value => ({ type: "GET_ALL_INFO", payload: value })

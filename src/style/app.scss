@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  .app {
+    display: flex;
+    background-color: rgb(8, 18, 41);
+    width: 1000px;
+    margin: 70px auto 0;
+    padding: 50px;
+
+    h2 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 25px;
+      position: relative;
+
+      &::before {
+        content: "";
+        background-color: #516391;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        width: 30%;
+      }
+      &::after {
+        content: "";
+        background-color: #516391;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        width: 30%;
+      }
+    }
+
+    .example {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        input,
+        select {
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          margin-bottom: 20px;
+          padding: 16px 10px;
+          width: 100%;
+          font-size: 18px;
+          border: 2px solid transparent;
+          background-color: #fff;
+
+          &:hover {
+            border: 2px solid #ec5990;
+          }
+          &:focus {
+            border: 2px solid rgb(18, 204, 236);
+          }
+        }
+        .radio {
+          display: flex;
+          margin-bottom: 20px;
+
+          label {
+            display: flex;
+            margin-right: 25px;
+            font-size: 20px;
+
+            input {
+              width: 15px;
+              height: 15px;
+              border: 1px solid #fff;
+              margin-top: 4px;
+              margin-left: 2px;
+            }
+          }
+        }
+
+        .buttons {
+          display: flex;
+          flex-direction: column;
+
+          .btn {
+            border-radius: 4px;
+            color: #fff;
+            text-transform: uppercase;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 400;
+            margin: 10px 0 20px;
+            padding: 16px 10px;
+            transition: all 0.3s;
+            background-color: #ec5990;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            letter-spacing: 5px;
+            transform: translateY(0);
+
+            &:focus {
+              transform: translateY(3px);
+            }
+          }
+          .edit_btn {
+            background: rgb(15, 15, 15);
+            margin-top: 20px;
+            border: 1px solid #ec5990;
+          }
+          span {
+            margin: auto;
+            display: flex;
+            font-size: 18px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            position: relative;
+
+            &::before {
+              content: "";
+              background-color: #516391;
+              height: 1px;
+              position: absolute;
+              top: 50%;
+              left: 5%;
+              width: 40%;
+            }
+            &::after {
+              content: "";
+              background-color: #516391;
+              height: 1px;
+              position: absolute;
+              top: 50%;
+              right: 5%;
+              width: 40%;
+            }
+          }
+        }
+      }
+    }
+    .watch {
+      margin-left: 40px;
+
+      p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      pre {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 20px;
+
+        p {
+          font-size: .9rem;
+          line-height: 1.6;
+          margin-left: 25px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
